@@ -1,0 +1,15 @@
+@use "sass:map";
+@import './custome_theme/light_theme';
+@import './themes';
+
+// @function colors($color) {
+//   @return map.get($colors,$color);
+// }
+
+@function color($color,$colors:$light) {
+  @return map.get($colors, $color);
+}
+
+@function color-from-theme($theme,$color) {
+  @return map-get(map-get($themes, $theme), $color);
+}

@@ -1,0 +1,32 @@
+@media screen and (min-width: 968px) {
+  .hamburger {
+    display: none;
+  }
+
+  .header__button {
+    display: block;
+  }
+
+  .header__links {
+    flex: 0 0 50%;
+  }
+  
+  .hamburger__icon {
+    flex: 0 0 20%;
+  }
+  
+  .project__logo {
+    flex: 0 0 20%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .header__button {
+    display: none;
+  }
+
+  
+  .header__links {
+    display: none;
+  }
+}

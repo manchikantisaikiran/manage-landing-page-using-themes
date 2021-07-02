@@ -1,0 +1,12 @@
+<div class="section__container">
+    <h1 class="section__title component__title">what they've said</h1>
+    <div class="response__cards">
+        <div *ngFor="let data of responseData">
+            <app-response-card [name]="data.name" [image]="data.image" [message]="data.message"></app-response-card>
+        </div>
+        <!-- <div class="careosuel"></div> -->
+        <div class="button__container">
+            <button class="button primary__button">Get Started</button>
+        </div>
+    </div>
+</div>

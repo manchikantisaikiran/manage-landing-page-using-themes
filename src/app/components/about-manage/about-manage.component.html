@@ -1,0 +1,27 @@
+<div class="about__container">
+    <div class="about__heading-container">
+        <h1 class="section__title about__title">
+            What’s different about Manage?
+        </h1>
+        <p class="section__subtitle about__subtitle">
+            Manage provides all the functionality your team needs, without
+            the complexity. Our software is tailor-made for modern digital
+            product teams.
+        </p>
+    </div>
+
+    <div class="about__data-container">
+        <div class="about__data" *ngFor="let data of differenceAboutManageDescData;index as i;">
+            <div class="about__data-item">
+                <span class="primary__button button about__data-button">{{i + 1}}</span>
+                <h3 class="about__data-title">
+                    {{data.title}}
+                </h3>
+            </div>
+            <p class="about__data-desc section__subtitle">
+                {{data.description}}
+            </p>
+        </div>
+    </div>
+
+</div>

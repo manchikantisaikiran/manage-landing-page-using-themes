@@ -1,0 +1,16 @@
+.section__container{
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+}
+
+.component__title{
+    margin-bottom: 3rem;
+}
+
+.response__cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    justify-content: center;
+}

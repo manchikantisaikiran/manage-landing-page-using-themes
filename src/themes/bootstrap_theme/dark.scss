@@ -1,0 +1,27 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$bootstrap-dark: (
+  bg-body: $gray-800,
+  bg-header: $gray-700,
+  bg-card: $gray-700,
+  bg-footer: $black,
+  bg-team-works: $pink,
+  bg-hover: $pink,
+  bg-button: $pink,
+  bg-white-button: $gray-100,
+  bg-data-item-light: hsl(332deg 55% 72%),
+  bg-input: $gray-900,
+  header: $white,
+  body: $gray-100,
+  title: $white,
+  sub-title: $gray-200,
+  text: $gray-100,
+  text-light: $gray-300,
+  text-white: $gray-100,
+  heading: $white,
+  button: $gray-900,
+  button-white: $pink,
+  logo-brightness: brightness(10),
+);

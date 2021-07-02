@@ -1,0 +1,55 @@
+@import './themes';
+@import "./functions";
+
+
+// $themes: (
+//   default-light: $light,
+//   default-dark: $dark,
+// );
+
+@mixin create-context($classes...) {
+  @each $class in $classes {
+    #{$class} & {
+      @content;
+    }
+  }
+}
+
+@mixin change-theme-styles($styles) {
+  @each $theme, $varaibles in $themes {
+    @include create-context(".#{$theme}") {
+      @content;
+      transition: all 250ms ease-in;
+      @each $key, $value in $styles {
+        $color: color-from-theme($theme,$value);
+        $val: $color;
+        #{$key}: #{$val};
+      }
+    }
+  }
+}
+
+
+
+// @mixin styles($className, $styles) {
+//   @each $theme, $themeValue in $themes {
+//     .#{$theme} #{$className} {
+//       @each $style, $value in $styles {
+//         #{$style}: #{$value};
+//       }
+//     }
+//   }
+// }
+
+// @mixin color($colors, $color) {
+  //   color: color($color);
+  // }
+
+  // @mixin bg-color($colors, $color) {
+    //     background-color: color($color);
+// }
+
+// @mixin colors($colors, $color,$bg-color){
+//     color: color($color);
+//     background-color: color($bg-color);
+// }

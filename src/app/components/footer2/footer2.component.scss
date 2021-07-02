@@ -1,0 +1,27 @@
+@import '../../../themes/mixins';
+@import '../../../themes/functions';
+
+.team__works-container{
+    width: 100%;
+    background-color: color(bg-team-works);
+    color: color(text-white);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    @include change-theme-styles((background-color:bg-team-works,color:text-white));
+}
+
+.footer__title{
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+.button__container{
+    margin-top: 1.8rem;
+}
+
+.team__works-button{
+    font-weight: bold;
+    color: color(button-white);
+    @include change-theme-styles((color:button-white));
+}

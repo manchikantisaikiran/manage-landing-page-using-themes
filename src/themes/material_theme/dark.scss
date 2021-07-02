@@ -1,0 +1,25 @@
+@import "~@angular/material/theming";
+
+$material-dark: (
+  bg-body: #{mat-color(mat-palette($mat-grey,900))},
+  bg-header: #{mat-color(mat-palette($mat-grey,700))},
+  bg-card: #{mat-color(mat-palette($mat-grey,800))},
+  bg-footer: #{mat-color(mat-palette($mat-grey,900))},
+  bg-team-works: #{mat-color(mat-palette($mat-red,A100))},
+  bg-hover: #{mat-color(mat-palette($mat-red,A100))},
+  bg-button: #{mat-color(mat-palette($mat-red,A100))},
+  bg-white-button: $light-primary-text,
+  bg-data-item-light: #{mat-color(mat-palette($mat-grey,700))},
+  bg-input: $light-primary-text,
+  header: $dark-primary-text,
+  body: $light-primary-text,
+  title: #{mat-color(mat-palette($mat-grey,100))},
+  sub-title: #{mat-color(mat-palette($mat-grey,300))},
+  text: #{mat-color(mat-palette($mat-grey,200))},
+  text-light: #{mat-color(mat-palette($mat-grey,400))},
+  text-white: $light-primary-text,
+  heading: #{mat-color(mat-palette($mat-grey,100))},
+  button: $light-primary-text,
+  button-white: #{mat-color(mat-palette($mat-red,A400))},
+  logo-brightness: brightness(10),
+);

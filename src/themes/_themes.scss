@@ -1,0 +1,13 @@
+@import "./custome_theme/dark__theme";
+@import './bootstrap_theme/light';
+@import './bootstrap_theme/dark';
+@import './material_theme/light';
+@import './material_theme/dark';
+
+$themes: (
+  default-dark: $dark,
+  bootstrap-light:$bootstrap-light,
+  bootstrap-dark:$bootstrap-dark,
+  material-light:$material-light,
+  material-dark:$material-dark,
+);

@@ -1,0 +1,16 @@
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-footer2',
+  templateUrl: './footer2.component.html',
+  styleUrls: ['./footer2.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+export class Footer2Component implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
