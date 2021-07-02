@@ -9,7 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Custom Dark Theme
 ![alt text](./src/assets/custom__dark.png)
 ## Bootstrap Light Theme
-![alt text](./src/assets/bootstrap__light.png)
+![alt text](./src/assets/Bootstrap__light.png)
 ## Bootstrap Dark Theme
 ![alt text](./src/assets/Bootstrap__dark.png)
 ## Material Light Theme
