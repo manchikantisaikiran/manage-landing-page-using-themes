@@ -11,7 +11,7 @@
   @include change-theme-styles(
     (
       background: bg-card,
-    )
+    ),'component'
   );
 }
 
@@ -33,6 +33,6 @@
     @include change-theme-styles(
     (
       color: sub-title,
-    )
+    ),'component'
   );   
 }

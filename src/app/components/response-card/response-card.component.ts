@@ -3,8 +3,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-response-card',
   templateUrl: './response-card.component.html',
-  styleUrls: ['./response-card.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./response-card.component.scss']
 })
 export class ResponseCardComponent implements OnInit {
 

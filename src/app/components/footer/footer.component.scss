@@ -8,7 +8,7 @@ footer{
     padding: 2.5rem;
     position: relative;
     color: color(bg-body);
-    @include change-theme-styles((background-color:bg-footer,color:bg-body));
+    @include change-theme-styles((background-color:bg-footer,color:bg-body),'component');
 }
 
 .footer__container{
@@ -32,7 +32,7 @@ footer{
     flex-wrap: wrap;
     justify-content: space-between;
     color: color(text-white);
-    @include change-theme-styles((color:text-white));
+    @include change-theme-styles((color:text-white),'component');
 
 }
 
@@ -46,7 +46,7 @@ footer{
     outline: none;
     border: none;
     background-color: color(bg-input);
-    @include change-theme-styles((color:bg-input));
+    @include change-theme-styles((color:bg-input),'component');
 }
 
 .footer__socials{
@@ -72,7 +72,7 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     color: color(text-white);
-    @include change-theme-styles((color:text-white));
+    @include change-theme-styles((color:text-white),'component');
 }
 
 @media screen and (min-width:768px) {

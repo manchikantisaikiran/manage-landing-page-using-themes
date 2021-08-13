@@ -1,13 +1,13 @@
-@import '../../../themes/mixins';
-@import '../../../themes/functions';
+@use '../../../themes/mixins' as mixin;
+@use '../../../themes/functions' as func;
 
 .team__works-container{
     width: 100%;
-    background-color: color(bg-team-works);
-    color: color(text-white);
+    background-color: func.color(bg-team-works);
+    color: func.color(text-white);
     padding: 1.5rem 0;
     margin-top: 2rem;
-    @include change-theme-styles((background-color:bg-team-works,color:text-white));
+    @include mixin.change-theme-styles((background-color:bg-team-works,color:text-white),'component');
 }
 
 .footer__title{
@@ -22,6 +22,6 @@
 
 .team__works-button{
     font-weight: bold;
-    color: color(button-white);
-    @include change-theme-styles((color:button-white));
+    color: func.color(button-white);
+    @include mixin.change-theme-styles((color:button-white),'component');
 }

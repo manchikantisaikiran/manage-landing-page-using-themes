@@ -28,7 +28,7 @@
     border-bottom-left-radius: 50px;
     align-items: center;
     margin-bottom: 1rem;
-    @include change-theme-styles((background-color:bg-data-item-light));
+    @include change-theme-styles((background-color:bg-data-item-light),'component');
 }
 
 .about__data-title{

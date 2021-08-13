@@ -3,8 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-about-manage',
   templateUrl: './about-manage.component.html',
-  styleUrls: ['./about-manage.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./about-manage.component.scss']
 })
 export class AboutManageComponent implements OnInit {
 
