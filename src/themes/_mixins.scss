@@ -1,6 +1,5 @@
-@import './themes';
+@import "./themes";
 @import "./functions";
-
 
 // $themes: (
 //   default-light: $light,
@@ -15,21 +14,54 @@
   }
 }
 
-@mixin change-theme-styles($styles) {
-  @each $theme, $varaibles in $themes {
-    @include create-context(".#{$theme}") {
+@mixin create-component-context($classes...) {
+  @each $class in $classes {
+    :host-context(#{$class}) & {
       @content;
-      transition: all 250ms ease-in;
-      @each $key, $value in $styles {
-        $color: color-from-theme($theme,$value);
-        $val: $color;
-        #{$key}: #{$val};
-      }
     }
   }
 }
 
+// @mixin change-component-theme-styles($styles) {
+//   @each $theme, $varaibles in $themes {
+//     @include create-component-context(".#{$theme}") {
+//       @content;
+//       transition: all 250ms ease-in;
+//       @each $key, $value in $styles {
+//         $color: color-from-theme($theme, $value);
+//         $val: $color;
+//         #{$key}: #{$val};
+//       }
+//     }
+//   }
+// }
 
+@mixin change-theme-styles($styles, $level: "global") {
+  @each $theme, $varaibles in $themes {
+    @if $level == "component" {
+      @include create-component-context(".#{$theme}") {
+        @content;
+        transition: all 250ms ease-in;
+        @each $key, $value in $styles {
+          $color: color-from-theme($theme, $value);
+          $val: $color;
+          #{$key}: #{$val};
+        }
+      }
+    }
+    @else {
+      @include create-context(".#{$theme}") {
+        @content;
+        transition: all 250ms ease-in;
+        @each $key, $value in $styles {
+          $color: color-from-theme($theme, $value);
+          $val: $color;
+          #{$key}: #{$val};
+        }
+      }
+    }
+  }
+}
 
 // @mixin styles($className, $styles) {
 //   @each $theme, $themeValue in $themes {
@@ -42,11 +74,11 @@
 // }
 
 // @mixin color($colors, $color) {
-  //   color: color($color);
-  // }
+//   color: color($color);
+// }
 
-  // @mixin bg-color($colors, $color) {
-    //     background-color: color($color);
+// @mixin bg-color($colors, $color) {
+//     background-color: color($color);
 // }
 
 // @mixin colors($colors, $color,$bg-color){

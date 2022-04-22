@@ -8,6 +8,7 @@ footer{
     padding: 2.5rem;
     position: relative;
     color: color(bg-body);
+<<<<<<< HEAD
     @include change-theme-styles((background-color:bg-footer,color:bg-body));
     .footer__links{
         display: flex;
@@ -17,6 +18,9 @@ footer{
         @include change-theme-styles((color:bg-team-works));
     
     }
+=======
+    @include change-theme-styles((background-color:bg-footer,color:bg-body),'component');
+>>>>>>> 6153c18caeddea1efad3838a3721890995c10bb5
 }
 
 .footer__container{
@@ -36,7 +40,16 @@ footer{
 }
 
 .footer__links{
+<<<<<<< HEAD
     color: red;
+=======
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: color(text-white);
+    @include change-theme-styles((color:text-white),'component');
+
+>>>>>>> 6153c18caeddea1efad3838a3721890995c10bb5
 }
 
 
@@ -50,7 +63,7 @@ footer{
     outline: none;
     border: none;
     background-color: color(bg-input);
-    @include change-theme-styles((color:bg-input));
+    @include change-theme-styles((color:bg-input),'component');
 }
 
 .footer__socials{
@@ -76,7 +89,7 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     color: color(text-white);
-    @include change-theme-styles((color:text-white));
+    @include change-theme-styles((color:text-white),'component');
 }
 
 @media screen and (min-width:768px) {
