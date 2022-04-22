@@ -1,0 +1,35 @@
+@import "./dark__theme";
+@import "./light_theme";
+
+
+
+$custom-theme: (
+  "font-size": 16px,
+
+  //background colrs
+  bg-body: hsl(250, 60%, 99%),
+  bg-header: hsl(250, 0%, 95%),
+  bg-card: hsl(250, 85%, 95%),
+  bg-footer: hsl(250, 10%, 15%),
+  bg-team-works: hsl(22, 74%, 50%),
+  bg-hover: hsl(22, 74%, 50%),
+  bg-button: hsl(22, 78%, 50%),
+  bg-white-button: hsl(250, 60%, 99%),
+  bg-data-item-light: hsl(22, 100%, 88%),
+  bg-input: hsl(250, 60%, 95%),
+
+  //colors
+  header: hsl(250, 60%, 9%),
+  body: hsl(250, 60%, 9%),
+  title: hsl(250, 8%, 15%),
+  sub-title: hsl(240, 2%, 11%),
+  text: hsl(255, 8%, 9%),
+  text-light: hsl(300, 4%, 27%),
+  text-white: hsl(250, 60%, 99%),
+  heading: hsl(0, 0%, 0%),
+  button: hsl(250, 60%, 99%),
+  button-white: hsl(22, 74%, 49%),
+
+  //brightness
+  logo-brightness: none,
+);

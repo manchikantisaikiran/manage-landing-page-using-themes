@@ -9,6 +9,14 @@ footer{
     position: relative;
     color: color(bg-body);
     @include change-theme-styles((background-color:bg-footer,color:bg-body));
+    .footer__links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: color(text-white);
+        @include change-theme-styles((color:bg-team-works));
+    
+    }
 }
 
 .footer__container{
@@ -28,13 +36,9 @@ footer{
 }
 
 .footer__links{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: color(text-white);
-    @include change-theme-styles((color:text-white));
-
+    color: red;
 }
+
 
 .footer__links a{
     width: 100px;
