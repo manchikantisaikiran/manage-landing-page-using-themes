@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BootstrapIconsModule } from 'ng-bootstrap-icons';
 import { allIcons } from 'ng-bootstrap-icons/icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StorageService } from './storage.service';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutManageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     BootstrapIconsModule.pick(allIcons),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

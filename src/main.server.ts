@@ -1,7 +1,10 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+/***************************************************************************************************
+ * Load `$localize` onto the global scope - used if i18n tags appear in Angular templates.
+*/
+import '@angular/localize/init';
 
-import { AppModule } from './app/app.module';
+import { enableProdMode } from '@angular/core';
+
 import { environment } from './environments/environment';
 
 // Import the functions you need from the SDKs you need
@@ -16,17 +19,15 @@ const firebaseConfig = {
   projectId: "manage-landing-page-da767",
   storageBucket: "manage-landing-page-da767.appspot.com",
   messagingSenderId: "495973558509",
-  appId: "1:495973558509:web:f6b7dcbe90b96f019b84e4"
+  appId: "1:495973558509:web:785019129439a60d9b84e4"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 if (environment.production) {
   enableProdMode();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .catch((err) => console.error(err));
-});
+export { AppServerModule } from './app/app.server.module';
+export { renderModule, renderModuleFactory } from '@angular/platform-server';

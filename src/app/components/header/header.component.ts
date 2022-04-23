@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { StorageService } from 'src/app/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -11,8 +13,9 @@ export class HeaderComponent implements OnInit {
   activeThemeMode = 'light';
   activeTheme = 'default';
 
-  constructor() {
-    const activetheme = localStorage.getItem('currentTheme');
+  constructor(@Inject(DOCUMENT) private document:Document,
+  private localStorage:StorageService) {
+    const activetheme = this.localStorage.get('currentTheme');
     if(activetheme){
       [this.activeTheme,this.activeThemeMode] = activetheme.split('-');
     }
@@ -37,11 +40,11 @@ export class HeaderComponent implements OnInit {
 
   changeThemeMode(theme: string) {
     this.activeThemeMode = theme;
-    const html = document.querySelector('html');
+    const html = this.document.querySelector('html');
     const classToToggle = `${this.activeTheme}-${this.activeThemeMode}`
     html?.setAttribute('class','');
     html?.classList.add(classToToggle);
-    localStorage.setItem('currentTheme',`${this.activeTheme}-${this.activeThemeMode}`);
+    this.localStorage.set('currentTheme',`${this.activeTheme}-${this.activeThemeMode}`);
   }
 
   changeTheme(theme: string) {
